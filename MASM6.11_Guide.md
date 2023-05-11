@@ -1,6 +1,7 @@
 # **MASM6.11 (Macro Assembler 6.11)**
 ## Basic Concepts
 1. **DATA TYPES** [^1] [^2]
+    <!-- title separator -->
     Here are some examples of how to declare variables
     | DATA TYPES | EXAMPLE |
     | ---------- | ------- |
@@ -10,6 +11,7 @@
     | DQ (DEFINE QUADWORD 64) | `w dq  7898452478984521` |
     <!-- separator -->
 2. **ARRAYS**
+    <!-- title separator -->
     Here are some examples of how to declare arrays.
     | declaration type | Example |
     | ---------------- | ------- |
@@ -19,6 +21,7 @@
     | declare an empty array | `myArray db 10 dup(?)` |
     <!-- separator -->
 3. **INSTRUCTIONS**
+    <!-- title separator -->
     **Mov instruction:** it copies the second operand called source to the first operand called destination.
     An example of how to use mov instruction: `mov AX, 3h`. types of operand supported by mov instruction are shown in the table below. [^3]
     | No | OPERAND | Example |
@@ -96,9 +99,11 @@
     <!-- separator -->
     the shift and rotate instructions takes as source the times you want to do the operation. both uses the carry flag to save values from the MSB and LSB.
 4. **MEMORY**
+    <!-- title separator -->
     Combinations between registers, pointers and indexes for accesing memory.
     `BX + SI` or `BP + DI`
 5. **PROCESSOR STATUS REGISTER OR FLAGS**
+    <!-- title separator -->
     | 15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
     | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | 
     | X | X | X | X | OF | DF | IF | TF | SF | ZF | X | AF | X | PF | X | CF |
@@ -114,6 +119,7 @@
     - PF -> PARITY FLAG.
     - CF -> CARRY FLAG.
 6. **LABELS**
+    <!-- title separator -->
     A label is an specific set of code, for example:
     ```
     Read:
@@ -125,6 +131,7 @@
     ```
     there are two labels in here `Read` label and `Exit` label.
 7. **INTERRUPTS**
+    <!-- title separator -->
     Interrupts are an input signal to the processor indication an event that needs immediate attention. you can find most of the interrupts here in the [dosints textbook](./dosints.pdf)
 [^1]: Note that the scale size is in bits.
 [^2]: If you are pointing to a string the datatype memory is allocated for each character ('$' is used for End of String). 
