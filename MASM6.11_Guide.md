@@ -101,6 +101,10 @@
     | `ror` | rotates the 16 bit register to the right |
     <!-- separator -->
     the shift and rotate instructions takes as source the times you want to do the operation. both uses the carry flag to save values from the MSB and LSB.
+    **LEA isntruction:** the 'lea' instruction is used to calculate the effective address of a memory operand and store it in a register. 'lea' stand for `Load Effective Address`. The syntax of 'lea' is:
+    | instruction | Use |
+    | ----------- | --- |
+    | `lea DX, buffer` | the DX register is where the effective address will be stored, and buffer variable is the memory operand whose address will be calculated.
 4. **MEMORY**
 
 
@@ -138,8 +142,11 @@
     there are two labels in here `Read` label and `Exit` label.
 7. **INTERRUPTS**
 
+    Interrupts serve as input signals to the processor, indicating events that require immediate attention. A comprehensive collection of interrupts can be found in the ["dosints"](./dosints.pdf) textbook.
 
-    Interrupts are an input signal to the processor indication an event that needs immediate attention. you can find most of the interrupts here in the [dosints textbook](./dosints.pdf)
+8. **USERS MANUAL**
+    !["standar usage"](./standar.jpg)
+
 [^1]: Note that the scale size is in bits.
 [^2]: If you are pointing to a string the datatype memory is allocated for each character ('$' is used for End of String). 
 [^3]: mov MEMORY, MEMORY is not supported.
