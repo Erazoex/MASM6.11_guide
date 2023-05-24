@@ -136,7 +136,7 @@
         mov AH, 01
         jmp Exit
     Exit:
-        mov AH, 4ch
+        mov AH, 00
         int 21h
     ```
     there are two labels in here `Read` label and `Exit` label.

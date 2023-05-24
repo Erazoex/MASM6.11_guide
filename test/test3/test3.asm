@@ -8,7 +8,7 @@ buffer          db 21 dup('$')    ; buffer to store keyboard input
 .code
 .startup
     ; printing the variable message
-    call esperar_enter
+    call wait_for_enter
     mov DX, offset message
     mov AH, 09
     int 21
@@ -24,14 +24,14 @@ buffer          db 21 dup('$')    ; buffer to store keyboard input
     int 21
 
     mov DX, offset buffer + 2 ; offsetting 2 positions, the first byte(maximum length) and the second byte(actual length)
-    mov AH, 09
+    mov AH, 09                ; for more information check the dosint textbook (int 21 - AH = 0Ah)
     int 21 
     call salir
-esperar_enter:
+wait_for_enter:
     mov AH, 08
     int 21
     cmp AL, 0d
-    jne esperar_enter
+    jne wait_for_enter
     ret
 salir:
     .exit

@@ -3,8 +3,8 @@
 .stack 
 .data
 message         db 0d, 0a, 'input something to the console: ', '$'
-output_message  db 0d, 0a, 'no salio ', '$'
-si_funciono     db 0d, 0a, 'si salio', '$'
+output_message  db 0d, 0a, 'the char is different from A', '$'
+it_worked     db 0d, 0a, 'it worked', '$'
 .code
 .startup
     ; printing the variable message
@@ -16,13 +16,13 @@ si_funciono     db 0d, 0a, 'si salio', '$'
     mov AH, 01
     int 21
     cmp AL, 41 ; we will compare if AL is equal to the character 'A' in ascii
-    je si_salio
+    je if_worked
     mov DX, offset output_message
     mov AH, 09
     int 21
     
-si_salio:
-    mov DX, offset si_funciono
+if_worked:
+    mov DX, offset it_worked
     mov AH, 09
     int 21
 .exit
