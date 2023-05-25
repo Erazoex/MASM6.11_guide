@@ -94,7 +94,7 @@
     | ----------- | --- |
     | `inc` | adds 1 to any register |
     | `dec` | substract 1 from any register |
-    | `comp` | substract source from destination and set the flags |
+    | `cmp` | substract source from destination and set the flags |
     | `shl` | shifts the 16 bit register to the left |
     | `shr` | shifts the 16 bit register to the right |
     | `rol` | rotates the 16 bit register to the left |
